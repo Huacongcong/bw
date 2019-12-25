@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>治愈系</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		a{
+		color: white;
+		text-decoration: none;
+		
+		}
+		a:hover{
+			color: black;
+		}
+		ul,li{
+	    list-style: none;
+		}
+		p{
+			text-indent: 2em;
+		}
+		#app{
+			width: 100%
+			height: 50px;
+			background-color:rgba(100,200,100,0.5); 
+		}
+		.head{
+			width: 1200px;
+			height: 50px;
+			margin: auto;
+		}
+		.search-left li{
+			list-style-type: inline-block;
+			width: 50px;
+			height: 50px;
+			margin-left: 10px;
+			float: left;
+			text-align: center;
+			color: white;
+			line-height: 50px;
+		}
+		.search-left img{
+			width: 70px;
+			height: 50px;
+
+		}
+		.search form{
+			position: absolute;
+			left: 800px;
+			top: 10px;
+			width: 220px;
+			height: 20px;
+		}
+		.search input{
+			width: 200px;
+			height: 20px;
+		}
+		.search img{
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: 3px;
+		}
+		.serch button{
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: 3px;
+		}
+		.search-right li{
+			list-style-type: inline-block;
+			width: 50px;
+			height: 50px;
+			float: right;
+			text-align: center;
+			color: white;
+			line-height: 50px;
+		}
+		.search-right img{
+			width: 25px;
+			height: 25px;
+			position: absolute;
+			top: 11px;
+		}
+	
+		#nav{
+			height:100px;
+			width:100%;
+			background-color:green;
+		}
+		.tit{
+			width:100%;
+			height:650px;
+			overflow: hidden;
+		}
+
+		#bigm{
+			display:block;
+			width:1500px
+			height:650px;
+		}
+		#ti{
+			width:750px;
+			height:650px;
+			text-align:center;
+			cursor:pointer;
+			background-color:rgba(0,100,50,0.3);
+			position: absolute;
+			top:52px;
+			z-index: 110;
+		}
+		#ti div{
+			color:#fff;
+			opacity: 1;
+			width: 270px;
+			height:650px;
+			position: absolute;
+			top:320px;
+			left: 350px;
+		}
+		#ti h1{
+			color:#fff;
+			position: absolute;
+			left:100px;
+			top:50px;
+			font-family:"FZYaoti";
+			font-size:40px;
+		}
+		.d1{
+			width:1200px;
+			height:300px;
+			position:relative;
+			overflow:hidden;
+			background:url(hcc/xwdsh.jpg);
+		}
+		.d2{
+			width:1200px;
+			height:300px;
+			background-image: url(hcc/z2.jpg);
+			position: relative;
+			left:300px;
+		}
+		.d3{
+			width:1200px;
+			height:300px;
+			background-image: url(hcc/x2.jpg);
+			float:left;
+		}
+		.box{
+			width:350px;
+			height:250px;
+			overflow: hidden;
+			float: left;
+			position: relative;
+			top:10px;
+			left:20px;
+		}
+		#tus{
+			width:1400px;
+			height:250px;
+			position: absolute;
+			left:0px;
+			top:10px;
+		}
+		.tp{
+			display: inline-block;
+			width:350px;
+			height:250px;
+			float: left;
+		}
+		
+		.mm{
+			display: inline-block;
+			width:350px;
+			height:250px;
+		}
+		.wz1{
+			width: 700px;
+			height:250px;
+			float: right;
+			position: absolute;
+			right:50px;
+			top:20px;
+		}
+		.wz1 p{
+			color:#555;
+		}
+		#p1,#p3{
+			font-size: 20px;
+			font-family: "YouYuan";
+		}
+		#p2{
+			font-size: 20px;
+			font-family: "YouYuan";
+			position: relative;
+			left:250px;
+			top:10px;
+
+		}
+		.wz2{
+			width: 700px;
+			height:250px;
+			float: right;
+			position: relative;
+			right:50px;
+			top:20px;
+		}
+		.wz2 a{
+			color:#555;
+		}
+		.wz2 a:hover{
+			color:red;
+		}
+		.wz3{
+			width: 700px;
+			height:250px;
+			float: right;
+			position: relative;
+			right:50px;
+			top:20px;
+			color:rgb(150,255,150);
+		}
+		.wz3 a{
+			color:rgb(150,255,150);
+		}
+		.wz3 a:hover{
+			color:red;
+		}
+		.jt{
+			width:50px;
+			height: 50px;
+			float: right;
+			position: fixed;
+			bottom: 0;
+			right:0;
+			display: none;
+		}
+		.litm{
+			width: 50px;
+			height: 50px;
+			opacity: 0.5;
+		}
+		#s2{
+			display:block;
+			width:350px;
+			height:250px;
+			text-align:center;
+			cursor:pointer;
+			position: relative;
+			line-height: 250px;
+			background-color:black;
+			opacity:0;
+			color:#fff;
+		}
+		#s2 a{
+			position: relative;
+			top:-250px;
+		}
+		#s2 a:hover{
+			color:#fff;
+		}
+		#s3 a:hover{
+			color:#fff;
+		}
+		#s3{
+			display:block;
+			width:350px;
+			height:250px;
+			text-align:center;
+			cursor:pointer;
+			position: relative;
+			top:-255px;
+			line-height: 250px;
+			background-color:black;
+			opacity:0;
+			color:#fff;
+		}
+		.bottom{
+			height: 100px;
+			width: 1530px;
+			margin: 0 auto;
+			background-color: rgb(100,100,100);
+			position: absolute;
+			bottom:-1250px;
+			
+		}
+		.bp2{
+		 	color: white;
+		 	font-size: 14px;
+		 	position: relative;
+		 	text-align: center;
+		 	top:20px;
+		 }
+		 .b1{
+		 	margin: 0 14px;
+		 }
+		 .bottom a{
+		 	color: white;
+		 }
+	</style>
+</head>
+<body>
+	<div id ="flame">
+	<div id="app">
+<div class="head">
+	<div class="search-left">
+		<ul>
+		<li><img src="hcc/312.png" alt="logo"></li>
+		<li><a href="#">首页</a></li>
+		<li><a href="#">国创</a></li>
+		<li><a href="#">治愈</a></li>
+		<li><a href="#">探险</a></li>
+		<li><a href="#">搞笑</a></li>
+		<li><a href="#">少儿</a></li>
+		<li><a href="#">全部</a></li>
+	
+		</ul>
+	</div>
+	<div class="search">
+		<form>
+			<input type="text" name="search" value="">
+			<button><img src="hcc/search.jpg"></button>
+		</form>
+	</div>
+	<div class="search-right">
+			<ul>
+			<li><a href="#">注册</a></li>
+			<li style="width:10px;height:50px;">/</li>
+			<li><a href="#">登陆</a></li>
+			<li><img src="hcc/load.jpg"></li>
+			</ul>
+	</div>	
+</div>
+</div>
+<div class ="tit">
+	<div class="dim"><img src="hcc/aa.jpg" id="bigm"></div>
+	<div id = "ti">
+		<h1>治愈系</h1>
+		<div>
+			<h2>你那么坚强，一定很累吧</h2></br></br>
+			<p>有这样一段话：“小时候，坚强的孩子没人疼，长大后，才发现没人疼的孩子要坚强。” 有时候，坚强并非就意味着强大。不是真的坚不可摧，而是知道，有些苦只能自己去面对，若是软弱，无人能替自己坚强。 </p>
+		</div>
+		
+	</div>
+</div>
+</div>
+	</br>
+	<p id = "p1">综艺</p>
+	</br>
+	<div class = "d1">	
+		<div class="box">
+			<div id="tus">
+				<div class="tp"><img src = "hcc/m1.jpg" class= "mm"></div>
+				<div class="tp"><img src = "hcc/m2.jpg" class= "mm"></div>
+				<div class="tp"><img src = "hcc/m3.jpg" class= "mm"></div>
+				<div class="tp"><img src = "hcc/m1.jpg" class= "mm"></div>			
+			</div>
+		</div>
+		<div class = "wz1">
+			<h4>节目背景</h4>
+			<p>繁忙的都市生活给人们带来了压力与浮躁，有调查显示近40.4%的人希望远离喧嚣，避开拥挤，向往着从城市搬到农村，呼吸自然的空气，寻找内心的声音。这是《向往的生活》这档节目制作的初衷。</p>
+			<h4>节目特色</h4>
+			<p>《向往的生活》给明星和嘉宾提出的要求只是：
+			自己去田地里采摘，搭炉灶，利用农居里仅有的传统生活用品，过自给自足的生活。如果再有额外的需求则需要他们用相应的劳动来交换。美好的生活都是用双手劳动换来的，节目通过让嘉宾们回归生活本身，来讲述一些简单的朴实的道理，比如要珍惜一顿饭的价值，讲讲中国人的待客之道。</p>
+			<h4>推荐理由</h4>
+			<p>生活其实很简单，幸福如人饮水，冷暖自知，用不着在朋友圈晒来晒去，真正的幸福不在别人眼里，而在自己心里。</p>
+		</div>
+	</div>
+	</br>
+	<p id = "p2">电视剧</p>
+	</br>
+	<div class = "d2">	
+		<div class="box">
+			<div id="tus">
+				<div class="tp" ><img src = "hcc/z1.jpg" class= "mm"></div>	
+				<span id = 's2'>
+					<a href="http://www.iqiyi.com/a_19rrhbd6ad.html?vfm=2008_aldbd">最好的我们</a>
+				</span>
+			</div>
+		</div>
+		<div class = "wz2">
+			<p>类型：青春、校园、情感</p>
+			<p>首播时间：2016年4月8日</p>
+			<p>主演：<a href="https://baike.baidu.com/item/%E5%88%98%E6%98%8A%E7%84%B6/13135002">刘昊然</a>/<a href="https://baike.baidu.com/item/%E8%B0%AD%E6%9D%BE%E9%9F%B5/9096111">谭松韵</a>等</p></br>
+			<h4>剧情简介：</h4>
+			<p>普通学生耿耿中考时意外考进振华高中，在偶然的机会下和“学霸”余淮相识。军训的时候，耿耿认识了闺蜜简单、蒋年年，之后又和余淮成为了同桌。进入振华后的生活就如耿耿预料的一样危机重重，摸底考试的沉重打击、上课听不懂等等，回到家里时，突然出现的新妈妈和新弟弟也让她一时无法接受。然而，因为同桌余淮、还有交到的一群好朋友的陪伴，这一切都变得不同，朋友们让耿耿的高中生活不再孤单。在高中三年同桌的时间内，耿耿和余淮从平凡的小事中共同成长，他们带着懵懂青涩的好感和青春告别。</p>
+			<h4>推荐理由</h4>
+			<p>青春磕磕绊绊，每个人相同却有不同，这是最好的年纪，加油，别辜负他！</p>
+		</div>
+	</div>
+	</br>
+	<p id = "p3">电影</p></br>
+	<div class ="d3">
+		
+		<div class = "box">
+			<div id="tus">
+				<img src="hcc/x1.jpg" class ="mm">
+				<span id = 's3'>
+					<a href="https://www.iqiyi.com/v_19rrkcwuls.html?vfm=2008_aldbd">小王子</a>
+				</span>
+			</div>
+			
+		</div>
+		<div class = "wz3">
+			<p>类型：动画、奇幻</p>
+			<p>导演：<a href="https://baike.baidu.com/item/%E9%A9%AC%E5%85%8B%C2%B7%E5%A5%A5%E6%96%AF%E6%9C%AC">马克奥斯本</a></p>
+			<h4>剧情简介：</h4>
+			<p>一个小女孩和妈妈在都市里相依为命，望女成凤的妈妈期望她考进一所精英学校，小女孩则在妈妈的规划下努力学习着。然而她们搬到新家后，住在隔壁的老人投出的纸飞机引起了小女孩的好奇。老人的行为有些古怪，从前他曾是一位飞行员。小女孩悄悄和老人成为了好朋友，在他的讲述中，得知年轻时的他在沙漠中迫降并遇到了很不可思议的小男孩——小王子。不久老人病倒了，为帮他实现再见到小王子的愿望，小女孩驾驶着飞机去寻找小王子，开始了一段充满未知与感动的冒险。</p>
+			<h4>推荐理由</h4>
+			<p>失去了，才懂得珍惜。我们都在寻找那“遗失的美好”，但只有很少的人能意识到你身边的人，正是最值得你珍惜的人！人与人之间的友情，只有珍惜，才能让你去寻找那“遗失的美好”。</p>
+		</div>
+	</div>
+	<div class="bottom">
+		<p class="bp2">
+			<a href="#">关于我们</a><span class="b1">|</span>
+			<a href="#">版权声明</a><span class="b1">|</span>
+			<a href="#">VIP服务</a><span class="b1">|</span>
+			<a href="#">QQ群部落</a><span class="b1">|</span>
+			<a href="#">安利影片</a><span class="b1">|</span>
+			<a href="#">合作意向</a><span class="b1">|</span>
+			<a href="#">意见反馈</a><span class="b1">|</span>
+			<a href="#">联系我们</a>
+		</p></br>
+		<p class="bp2"> 2019-2020 312有限公司 版权所有</p>
+	</div>
+	<div class = "jt">
+		<img src="hcc/timg.jpg" class="litm">
+	</div>
+	<script type="text/javascript">
+		function getStyle(obj, attr){
+		if(obj.currentStyle){
+			return obj.currentStyle[attr];
+		} else {
+			return getComputedStyle(obj, null)[attr];
+			}
+		}
+		function animate(obj,json,callback){
+		clearInterval(obj.timer);
+		obj.timer = setInterval(function(){
+			var isStop = true;
+			for(var attr in json){
+				var now = 0;
+				if(attr == 'opacity'){
+					now = parseInt(getStyle(obj,attr)*100);
+				}else{
+					now = parseInt(getStyle(obj,attr));
+				}
+				var speed = (json[attr] - now) / 8;
+				speed = speed>0?Math.ceil(speed):Math.floor(speed);
+				var cur = now + speed;
+				if(attr == 'opacity'){
+					obj.style[attr] = cur / 100;
+				}else{
+					obj.style[attr] = cur + 'px';
+				}
+				if(json[attr] !== cur){
+					isStop = false;
+				}
+			}
+			if(isStop){
+				clearInterval(obj.timer);
+				callback&&callback();
+			}
+		}, 30)
+		}
+		var tus = document.getElementById("tus");
+		var box = document.getElementsByClassName("box");
+		var jt = document.getElementsByClassName("jt")[0];
+		var index = 0;
+		var isTop = true;
+		var time = null;
+		function next(){
+			index++;
+			animate(tus,{left:-350*index},function(){
+			if(index == 3){
+				tus.style.left = "0px";
+				index = 0;
+					
+			}
+		});
+		}
+		var timer = setInterval(next,3000);
+		window.onscroll = function upup(){
+			var ostop = document.documentElement.scrollTop;
+			if(ostop == 0){
+				jt.style.display = 'none';
+			}else{
+				jt.style.display = 'block';
+			}
+			if(!isTop){
+				clearInterval(time);
+			}
+			isTop = false;
+		};
+		jt.onclick = function(){
+			time = setInterval(function(){
+				var ostop = document.documentElement.scrollTop;
+				var speed = Math.floor(-ostop/6);
+				document.documentElement.scrollTop = ostop+speed;
+				isTop = true;
+				if(ostop == 0){
+					clearInterval(time);
+				}
+			},30);
+		}
+		var s2 = document.getElementById("s2");
+		s2.onmouseover = function(){
+			animate(s2,{opacity:50});
+			clearInterval(timer);
+		}
+		s2.onmouseout = function(){
+			animate(s2,{opacity:0});
+			timer = setInterval(next,3000);
+		}
+		var s3 = document.getElementById("s3");
+		s3.onmouseover = function(){
+			animate(s3,{opacity:50});
+			clearInterval(timer);
+		}
+		s3.onmouseout = function(){
+			animate(s3,{opacity:0});
+			timer = setInterval(next,3000);
+		}
+		function Obj(){}  //创建一个对象
+ 
+	    /*为这个对象添加一个具有一个参数的原型方法*/
+	    Obj.prototype.draw=function(o){
+	        var speed=0;   //雪花每次下落的数值（10px）
+	        var startPosLeft=Math.ceil(Math.random()*document.documentElement.clientWidth);//设置雪花随机的开始x值的大小
+	        o.style.opacity=(Math.ceil(Math.random()*3)+7)/10;  //设置透明度
+	        o.style.left=startPosLeft+'px'; 
+	        o.style.color="#fff";
+	        o.style.fontSize=12+Math.ceil(Math.random()*14)+'px';
+	        setInterval(function(){
+	            //雪花下落的top值小鱼屏幕的可视区域高时执行下列
+	            if(speed<document.documentElement.clientHeight){
+	                o.style.top=speed+'px';
+	                o.style.left=startPosLeft+Math.ceil(Math.random()*8)+'px';
+	                speed+=10;
+	            }
+	            else{
+	                o.style.display='none';
+	            }
+	        },400);
+	    }
+	 
+	    var flame=document.getElementById('flame');
+	  
+	    /*使用setInterval定时器每800毫秒创建一个雪花*/
+	    setInterval(function(){
+	        var odiv=document.createElement('div');  //创建div
+	        odiv.innerHTML="✽";   //div的内容
+	        odiv.style.position='absolute';  //div的绝对定位
+	        flame.appendChild(odiv);   //把创建好的div放进flame中
+	        var obj=new Obj();   //创建函数
+	        obj.draw(odiv);  //执行obj的draw方法
+	    },800);
+	</script>
+</body>
+</html>
